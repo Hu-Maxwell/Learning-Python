@@ -39,12 +39,12 @@ def get_weather(city_name, api_key):
 
         # this could be rewritten as 
         # weather = data['weather']
-        # weather[0]: IDK try deleting it and see what happens, maybe there are multiple weather states and 0 refers to the first? 
+        # weather_state = weather[0]: IDK, maybe there are multiple weather states and 0 refers to the first? 
         # weather_description = weather['description']
-        weather_description = data['weather'][0]['description']
+        weather_description = data['weather'][0]['main']
         
         print(f"City: {data['name']}")
-        print(f"Temperature: {main['temp']}°C")
+        print(f"Temperature: {main['temp']}°C, but feels like {main['feels_like']}°C.")
         print(f"Weather: {weather_description}")
         print(f"Humidity: {main['humidity']}%")
         print(f"Wind Speed: {wind['speed']} m/s")
