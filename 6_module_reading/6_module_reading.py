@@ -6,11 +6,11 @@ if __name__ == "__main__":
 
     Car.display_info(my_car)
 
-    Car.accelerate(my_car, 200)
+    my_car.accelerate(200)
     Car.display_info(my_car)
 
-    Car.decelerate(my_car, 100)
+    my_car.decelerate(100)
     Car.display_info(my_car)
 
-    Car.brake(my_car)
+    my_car.brake()
     Car.display_info(my_car)
