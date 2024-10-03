@@ -1,9 +1,16 @@
 from car_class import Car
 
-my_car = Car("Lamborghini", 8024)
 
-Car.print_car_details(my_car)
+if __name__ == "__main__":
+    my_car = Car("Lamborghini", 8024)
 
-Car.speed_up(my_car)
+    Car.display_info(my_car)
 
-Car.print_car_details(my_car)
+    Car.accelerate(my_car, 200)
+    Car.display_info(my_car)
+
+    Car.decelerate(my_car, 100)
+    Car.display_info(my_car)
+
+    Car.brake(my_car)
+    Car.display_info(my_car)

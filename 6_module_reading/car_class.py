@@ -6,10 +6,16 @@ class Car:
         self._speed = 0
         self.__engine = "Super fast engine"
 
-    def speed_up(self): 
-        self._speed = self._speed + 100
+    def accelerate(self, speed_increase): 
+        self._speed = self._speed + speed_increase
 
-    def print_car_details(self): 
+    def decelerate(self, speed_decrease):
+        self._speed = self._speed - speed_decrease
+
+    def brake(self):
+        self._speed = 0
+
+    def display_info(self): 
         print(f"{self.model}, {self.year}, {self._speed}, {self.__engine}")
 
     
